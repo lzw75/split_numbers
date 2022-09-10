@@ -163,6 +163,9 @@ def try_find(factors):
    print(z, y, x)
    outcome = (x >= 10**(m-1) and y >= 10**(m-1) and z >= 10**(m-1) and x+y+z == ans)
    print(outcome)
+   if outcome:
+      print("(%d + %d + %d)**3 == %d" % (z, y, x, cube))
+   
    return outcome
 
    
