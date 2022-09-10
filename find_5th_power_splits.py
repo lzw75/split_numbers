@@ -1,9 +1,9 @@
 from random import randint
 
-# Program to find m-digit numbers a, b, c such that (abc) = (a+b+c)^3,
-# where LHS refers to concatenation of a, b, c.
+# Program to find m-digit numbers a, b, c, d, e such that (abcde) = (a+b+c+d+e)^5,
+# where LHS refers to concatenation of a, b, c, d, e.
 
-m = 28
+m = 20
 
 # Simple probabilistic primality test.
 
@@ -211,6 +211,9 @@ def try_find(factors):
    print(z, y, x, w, v)
    outcome = (v >= 10**(m-1) and w >= 10**(m-1) and x >= 10**(m-1) and y >= 10**(m-1) and z >= 10**(m-1) and v+w+x+y+z == ans)
    print(outcome)
+   if outcome:
+      print("(%d + %d + %d + %d + %d)**5 == %d" % (z, y, x, w, v, pwr))
+   
    return outcome
 
    

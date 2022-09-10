@@ -1,7 +1,7 @@
 from random import randint
 
-# Program to find m-digit numbers a, b, c such that (abc) = (a+b+c)^3,
-# where LHS refers to concatenation of a, b, c.
+# Program to find m-digit numbers a, b, c, d such that (abcd) = (a+b+c+d)^4,
+# where LHS refers to concatenation of a, b, c, d.
 
 m = 15
 
@@ -212,6 +212,9 @@ def try_find(factors):
    print(z, y, x, w)
    outcome = (w >= 10**(m-1) and x >= 10**(m-1) and y >= 10**(m-1) and z >= 10**(m-1) and w+x+y+z == ans)
    print(outcome)
+   if outcome:
+      print("(%d + %d + %d + %d)**4 == %d" % (z, y, x, w, pwr))
+      
    return outcome
 
    
